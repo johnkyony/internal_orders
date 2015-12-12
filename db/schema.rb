@@ -11,7 +11,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151212135735) do
+ActiveRecord::Schema.define(version: 20151212150225) do
+
+  create_table "departments", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "io_requests", force: :cascade do |t|
+    t.integer  "department_id"
+    t.integer  "type_id"
+    t.string   "problem"
+    t.integer  "user_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "io_requests", ["department_id"], name: "index_io_requests_on_department_id"
+  add_index "io_requests", ["type_id"], name: "index_io_requests_on_type_id"
+  add_index "io_requests", ["user_id"], name: "index_io_requests_on_user_id"
+
+  create_table "types", force: :cascade do |t|
+    t.string   "problem_name"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "name"

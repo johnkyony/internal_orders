@@ -1,0 +1,14 @@
+# Read about fixtures at
+# http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  department: 
+  type: 
+  problem: MyString
+  user: 
+
+two:
+  department: 
+  type: 
+  problem: MyString
+  user: 

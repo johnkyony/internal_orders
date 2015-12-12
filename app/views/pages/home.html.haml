@@ -1,0 +1,19 @@
+.container 
+  - if @io_requests.empty?
+    %span.text-warning There are no tasks!
+  - else 
+    %table.table.table-hover.table-bordered
+      %thead
+        %tr
+          %th Department
+          %th Type
+          %th Problem
+      %tbody
+        - @io_requests.each do |io_request|
+          %tr
+            %td
+              %strong= io_request.department
+            %td.text-info= io_request.type
+            %td.text-success= io_request.problem
+            
+            
