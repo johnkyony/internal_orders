@@ -3,5 +3,8 @@ Rails.application.routes.draw do
 
   devise_for :users
   resources :users
-  root to: 'visitors#index'
+  resources :departments
+  resources :types 
+  resources :internal_orders
+  root to: 'pages#home'
 end

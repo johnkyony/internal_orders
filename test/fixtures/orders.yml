@@ -4,11 +4,11 @@
 one:
   department: 
   type: 
-  problem: MyString
+  problem: MyText
   user: 
 
 two:
   department: 
   type: 
-  problem: MyString
+  problem: MyText
   user: 

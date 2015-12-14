@@ -1,6 +1,6 @@
 require "test_helper"
 
-describe IoRequestsController do
+describe OrdersController do
   it "must be a real test" do
     flunk "Need real tests"
   end
