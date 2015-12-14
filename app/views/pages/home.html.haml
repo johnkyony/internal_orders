@@ -13,7 +13,11 @@
           %tr
             %td
               %strong= io_request.department
-            %td.text-info= io_request.type
-            %td.text-success= io_request.problem
+            %td.text-danger= io_request.type
+            %td= io_request.problem
+            %td.text-info= io_request.created_at
+            %td.text-success= io_request.completed
+            
+#modal.modal.fade{:role => "dialog", :tabindex => "-1"}
             
             
