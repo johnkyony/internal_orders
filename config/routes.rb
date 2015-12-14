@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   resources :users
   resources :departments
   resources :types 
-  resources :internal_orders
+  resources :orders
   root to: 'pages#home'
 end

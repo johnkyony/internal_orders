@@ -1,5 +1,5 @@
 .container 
-  - if @io_requests.empty?
+  - if @orders.blank?
     %span.text-warning There are no tasks!
   - else 
     %table.table.table-hover.table-bordered
@@ -9,7 +9,7 @@
           %th Type
           %th Problem
       %tbody
-        - @io_requests.each do |io_request|
+        - @orders.each do |io_request|
           %tr
             %td
               %strong= io_request.department

@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
   def home
-    @oder = Orders.all
+    @oders = Order.all
   end
 end
