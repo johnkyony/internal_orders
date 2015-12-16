@@ -1,0 +1,21 @@
+= link_to "Department" , new_department_path , class: 'btn btn-primary ' , remote: true
+.container 
+  - if @departments.blank?
+    %span.text-warning There are no tasks!
+  - else 
+    %table.table.table-hover.table-bordered
+      %thead
+        %tr
+          %th Name
+          
+          
+      %tbody
+        - @departments.each do |department|
+          %tr
+            %td
+              %strong= department.name
+            
+            
+#department_modal.modal.fade{:role => "dialog", :tabindex => "-1"}
+            
+            

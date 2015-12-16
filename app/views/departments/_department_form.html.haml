@@ -1,0 +1,12 @@
+
+.modal-dialog
+  .modal-content
+    .modal-header
+      %h1 New department
+  = simple_form_for department , class: 'clearfix' do |f|
+    .modal-body
+     
+      = f.input :name
+    .modal-footer
+      = f.submit 'Save' , class: 'btn btn-primary'
+      

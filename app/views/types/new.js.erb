@@ -1,0 +1,3 @@
+m = $('#type_modal');
+m.html('<%= j(render partial: 'type_form', locals: {type: @type}) %>');
+m.modal('show');

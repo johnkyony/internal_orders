@@ -7,8 +7,8 @@
   li = link_to 'Sign up', new_user_registration_path
 - if user_signed_in?
   - if current_user.admin?
-    li = link_to 'Types' , types_path
-    li = link_to 'Departments' , departments_path
+    li = link_to 'Types' ,  pages_type_path
+    li = link_to 'Departments' , pages_department_path
     li = link_to 'Users', users_path
     
 

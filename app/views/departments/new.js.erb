@@ -1,0 +1,3 @@
+m = $('#department_modal');
+m.html('<%= j(render partial: 'department_form', locals: {department: @department}) %>');
+m.modal('show');

@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   get 'pages/home'
+  get 'page/type'
+  get 'pages/department'
+  
 
   devise_for :users
   resources :users
