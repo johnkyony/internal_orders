@@ -1,5 +1,6 @@
+= render 'layouts/jumbotron'
 .container 
-  - if @orders.blank?
+  - if @orders.nil?
     %span.text-warning There are no internal order
   - else 
     %table.table.table-hover.table-bordered

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'pages/home'
-  get 'page/type'
+  get 'pages/type'
   get 'pages/department'
   
 

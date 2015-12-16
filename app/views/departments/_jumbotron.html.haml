@@ -1,0 +1,18 @@
+.container
+  .row
+    .col-md-8.col-md-offset-3
+      .jumbotron.text-center
+       
+        %h1
+          Internal orders
+          
+        - if current_user
+          .text-center
+            = link_to 'New Departments' , new_department_path , class: 'btn btn-primary ' , remote: true
+        
+          .text-center
+            %strong= current_user.email
+      
+          .text-center
+            = link_to 'logout' , destroy_user_session_path , method: :delete
+          

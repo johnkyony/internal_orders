@@ -1,4 +1,4 @@
-= link_to "Department" , new_department_path , class: 'btn btn-primary ' , remote: true
+= render 'departments/jumbotron'
 .container 
   - if @departments.blank?
     %span.text-warning There are no tasks!
