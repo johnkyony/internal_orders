@@ -2,7 +2,7 @@
   .modal-content
     .modal-header
       %h1 New Internal Order
-  = simple_form_for order , class: 'clearfix' do |f|
+  = simple_form_for order , class: 'clearfix' , remote: true do |f|
     .modal-body
       = f.association :department
       = f.association :type

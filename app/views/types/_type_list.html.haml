@@ -1,0 +1,22 @@
+= render 'types/jumbotron'
+        
+.container 
+  - if @types.blank?
+    %span.text-warning There are no tasks!
+  - else 
+    %table.table.table-hover.table-bordered
+      %thead
+        %tr
+          %th Problem type
+          %th Actions 
+         
+      %tbody
+        - @types.each do |type|
+          %tr
+            
+            %td.text-danger= type.problem_name
+            %td 
+              = link_to type_path(type) , remote: true , method: :delete do 
+                %i.glyphicon.glyphicon-remove
+              = link_to edit_type_path(type) , remote: true  do  
+                %i.glyphicon.glyphicon-pencil

@@ -5,7 +5,10 @@ class OrdersController < ApplicationController
     def create
         @order = Order.create(order_params)
         @order.user_id = current_user.id
-        redirect_to root_path
+        @orders  = Order.all
+    end
+    def destroy
+        
     end
     private
     def order_params

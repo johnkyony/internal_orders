@@ -7,6 +7,7 @@
       %thead
         %tr
           %th Name
+          %th Actions
           
           
       %tbody
@@ -14,6 +15,12 @@
           %tr
             %td
               %strong= department.name
+            %td 
+              = link_to department_path(department) , remote: true , method: :delete do
+                %i.glyphicon.glyphicon-remove
+              = link_to edit_department_path(department) , remote: true do
+                %i.glyphicon.glyphicon-pencil
+                  
             
             
 #department_modal.modal.fade{:role => "dialog", :tabindex => "-1"}

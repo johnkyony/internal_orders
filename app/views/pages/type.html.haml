@@ -1,21 +1,5 @@
-= render 'types/jumbotron'
-        
-.container 
-  - if @types.blank?
-    %span.text-warning There are no tasks!
-  - else 
-    %table.table.table-hover.table-bordered
-      %thead
-        %tr
-          %th Problem type
-         
-      %tbody
-        - @types.each do |type|
-          %tr
-            
-            %td.text-danger= type.problem_name
-            
-            
+#type-list.container
+  = render partial: 'types/type_list', locals: {types: @types}
 #type_modal.modal.fade{:role => "dialog", :tabindex => "-1"}
             
             
