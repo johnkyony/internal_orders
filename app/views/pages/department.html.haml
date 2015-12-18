@@ -1,28 +1,5 @@
-= render 'departments/jumbotron'
-.container 
-  - if @departments.blank?
-    %span.text-warning There are no tasks!
-  - else 
-    %table.table.table-hover.table-bordered
-      %thead
-        %tr
-          %th Name
-          %th Actions
-          
-          
-      %tbody
-        - @departments.each do |department|
-          %tr
-            %td
-              %strong= department.name
-            %td 
-              = link_to department_path(department) , remote: true , method: :delete do
-                %i.glyphicon.glyphicon-remove
-              = link_to edit_department_path(department) , remote: true do
-                %i.glyphicon.glyphicon-pencil
-                  
-            
-            
+#departments-list.container
+  = render partial: 'departments/department_list', locals: {departments: @departments}
 #department_modal.modal.fade{:role => "dialog", :tabindex => "-1"}
             
             

@@ -1,6 +1,6 @@
 = render 'layouts/jumbotron'
 .container 
-  - if @orders.nil?
+  - if @orders.blank?
     %span.text-warning There are no internal order
   - else 
     %table.table.table-hover.table-bordered
@@ -9,6 +9,8 @@
           %th Department
           %th Type
           %th Problem
+          %th Created at
+          %th Completed by
           %th Actions
       %tbody
         - @orders.each do |io_request|

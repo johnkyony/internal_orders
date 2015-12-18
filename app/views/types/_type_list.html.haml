@@ -2,7 +2,7 @@
         
 .container 
   - if @types.blank?
-    %span.text-warning There are no tasks!
+    %span.text-warning There are no types
   - else 
     %table.table.table-hover.table-bordered
       %thead
@@ -14,7 +14,7 @@
         - @types.each do |type|
           %tr
             
-            %td.text-danger= type.problem_name
+            %td.text-danger= type.name
             %td 
               = link_to type_path(type) , remote: true , method: :delete do 
                 %i.glyphicon.glyphicon-remove

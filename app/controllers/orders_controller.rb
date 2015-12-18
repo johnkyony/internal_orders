@@ -8,6 +8,9 @@ class OrdersController < ApplicationController
         @orders  = Order.all
     end
     def destroy
+        @order = Order.find(params[:id])
+        @order.destroy
+        @orders = Order.all
         
     end
     private
