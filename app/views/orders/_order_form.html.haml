@@ -2,13 +2,14 @@
   .modal-content
     .modal-header
       %h1 New Internal Order
-  = simple_form_for order , class: 'clearfix' , remote: true do |f|
-    .modal-body
-      = f.association :department
-      = f.association :type
-      = f.input :problem
-      - if current_user.admin?
-        = f.input :completed , as: :string , input_html: {"data-provide" => "datepicker"}
-    .modal-footer
-      = f.submit 'Save' , class: 'btn btn-primary'
-      
+    = simple_form_for order , class: 'clearfix' , remote: true do |f|
+      .modal-body
+        = f.association :department
+        = f.association :type
+        = f.input :problem
+        - if current_user.admin?
+          = f.input :completed , as: :string , input_html: {"data-provide"=> "datepicker"}
+      .modal-footer
+        = f.submit 'Save' , class: 'btn btn-primary'
+
+
