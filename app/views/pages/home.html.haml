@@ -1,24 +1,3 @@
-= render 'layouts/jumbotron'
-.container 
-  - if @orders.nil?
-    %span.text-warning There are no internal order
-  - else 
-    %table.table.table-hover.table-bordered
-      %thead
-        %tr
-          %th Department
-          %th Type
-          %th Problem
-      %tbody
-        - @orders.each do |io_request|
-          %tr
-            %td
-              %strong= io_request.department
-            %td.text-danger= io_request.type
-            %td= io_request.problem
-            %td.text-info= io_request.created_at
-            %td.text-success= io_request.completed
-            
+#orders-list.container
+  = render partial: 'orders/order_list', locals: {orders: @orders}
 #modal.modal.fade{:role => "dialog", :tabindex => "-1"}
-            
-            

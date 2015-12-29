@@ -2,10 +2,10 @@
   .modal-content
     .modal-header
       %h1 New type
-  = simple_form_for type , class: 'clearfix' do |f|
-    .modal-body
-     
-      = f.input :problem_name
-    .modal-footer
-      = f.submit 'Save' , class: 'btn btn-primary'
-      
+    = simple_form_for type , class: 'clearfix' do |f|
+      .modal-body
+       
+        = f.input :name
+      .modal-footer
+        = f.submit 'Save' , class: 'btn btn-primary'
+        

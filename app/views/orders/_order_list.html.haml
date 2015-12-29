@@ -1,0 +1,33 @@
+= render 'layouts/jumbotron'
+.container 
+  - if @orders.blank?
+    %span.text-warning There are no internal order
+  - else 
+    %table.table.table-hover.table-bordered
+      %thead
+        %tr
+          %th Department
+          %th Type
+          %th Problem
+          %th Created at
+          %th Completed 
+          %th Actions
+      %tbody
+        - @orders.each do |io_request|
+          %tr
+            %td
+              %strong= io_request.department
+            %td.text-danger= io_request.type
+            %td= io_request.problem
+            %td.text-info= io_request.created_at
+            %td.text-success= io_request.completed
+            %td 
+              = link_to order_path(io_request) , remote: true , method: :delete do 
+                %i.glyphicon.glyphicon-remove
+              = link_to edit_order_path(io_request) , remote: true do 
+                %i.glyphicon.glyphicon-pencil
+           
+            
+#modal.modal.fade{:role => "dialog", :tabindex => "-1"}
+            
+            

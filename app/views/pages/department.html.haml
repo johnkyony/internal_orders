@@ -1,21 +1,5 @@
-= render 'departments/jumbotron'
-.container 
-  - if @departments.blank?
-    %span.text-warning There are no tasks!
-  - else 
-    %table.table.table-hover.table-bordered
-      %thead
-        %tr
-          %th Name
-          
-          
-      %tbody
-        - @departments.each do |department|
-          %tr
-            %td
-              %strong= department.name
-            
-            
+#departments-list.container
+  = render partial: 'departments/department_list', locals: {departments: @departments}
 #department_modal.modal.fade{:role => "dialog", :tabindex => "-1"}
             
             
