@@ -16,8 +16,8 @@
         - @orders.each do |io_request|
           %tr
             %td
-              %strong= io_request.department
-            %td.text-danger= io_request.type
+              %strong= io_request.department.name
+            %td.text-danger= io_request.type.name
             %td= io_request.problem
             %td.text-info= io_request.created_at
             %td.text-success= io_request.completed
@@ -28,6 +28,5 @@
                 %i.glyphicon.glyphicon-pencil
            
             
-#modal.modal.fade{:role => "dialog", :tabindex => "-1"}
             
             
