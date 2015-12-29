@@ -6,8 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-admin = User.create([{name: 'admin'} , {role: 1} , {email: 'admin@admin.com'} , {encrypted_password: 'admin123'}])
-
+admin = User.new({name: 'admin' , role: 1 , email: 'admin@admin.com', password: 'starwars15'} )
+admin.save
 
 network = Type.create({name:'network'})
 internet_connection = Type.create({name: 'internet connection'})
